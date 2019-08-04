@@ -10,19 +10,24 @@ export default function Header() {
         setOpen(!open);
     }
     return (
-        <Navbar color="light" light expand="md">
-            <NavbarBrand tag={Link} to="/" >Minhas Séries</NavbarBrand>
-            <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={open} navbar>
-                <Nav className="ml-auto" navbar>
-                    <NavItem>
-                        <NavLink tag={Link} to="/generos" navbar={Navbar ? 1 : 0}>Gêneros</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink tag={Link} to="/generos/novo" nanavbar={Navbar ? 1 : 0}>Adicionar gênero</NavLink>
-                    </NavItem>
-                </Nav>
-            </Collapse>
+        <Navbar color='light' light expand='md'>
+            <div className='container'>
+                <NavbarBrand tag={Link} to='/' >Minhas Séries</NavbarBrand>
+                <NavbarToggler onClick={toggle} />
+                <Collapse isOpen={open} navbar>
+                    <Nav className='ml-auto' navbar>
+                        <NavItem>
+                            <NavLink tag={Link} to='/series' navbar={Navbar ? 1 : 0}>Séries</NavLink>
+                        </NavItem>
+                        {/*<NavItem>
+                        <NavLink tag={Link} to='/generos/novo' nanavbar={Navbar ? 1 : 0}>Adicionar gênero</NavLink>
+                    </NavItem>*/}
+                        <NavItem>
+                            <NavLink tag={Link} to='/generos' navbar={Navbar ? 1 : 0}>Gêneros</NavLink>
+                        </NavItem>
+                    </Nav>
+                </Collapse>
+            </div>
         </Navbar>
     );
 }
