@@ -59,6 +59,10 @@ In the project directory, you can run:
 ### `node node_modules\minhas-series-server\index.js`
 Runs the backend at port 3002
 
-### `yarn start`
+### `yarn start-react`
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `yarn start-server`
+Runs the server.<br>
+server opened on [http://localhost:3002](http://localhost:3002) 
